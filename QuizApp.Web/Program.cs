@@ -1,7 +1,14 @@
-﻿var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+﻿var builder = WebApplication.CreateBuilder (args);
 
-app.MapGet("/", () => "Hello World!");
+builder.Services.AddControllersWithViews ();
 
-app.Run();
+var app = builder.Build ();
+
+app.UseHttpsRedirection ();
+app.UseStaticFiles ();
+
+app.MapControllers ();
+app.MapFallbackToFile ("index.html");
+
+app.Run ();
 
