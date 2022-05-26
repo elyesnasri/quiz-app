@@ -1,5 +1,7 @@
-﻿/.idea/.idea.quiz-app.dir/.idea/.gitignore
+/.idea/.idea.quiz-app.dir/.idea/.gitignore
 /.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 /.idea/sonarlint/issuestore/index.pb
 /.idea/.idea.quiz-app.dir/.idea/indexLayout.xml
 /.idea/.idea.quiz-app.dir/.idea/vcs.xml
+QuizApp.Web/QuizApp.db-shm
+QuizApp.Web/QuizApp.db-wal
