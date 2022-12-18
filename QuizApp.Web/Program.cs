@@ -3,7 +3,7 @@ using QuizApp.Web.Data;
 using QuizApp.Web.GraphQL;
 
 var builder = WebApplication.CreateBuilder (args);
-const string _allowedOrigins = "_allowedOrigins";
+const string _corsPolicy = "_allowedOrigins";
 
 builder.Services.AddControllers ();
 
@@ -20,7 +20,7 @@ builder.Services
 
 builder.Services.AddCors (options =>
 {
-    options.AddPolicy (name: _allowedOrigins,
+    options.AddPolicy (name: _corsPolicy,
         policy =>
         {
             policy.WithOrigins("https://localhost:44498")
@@ -34,7 +34,7 @@ var app = builder.Build ();
 app.UseHttpsRedirection ();
 app.UseStaticFiles ();
 
-app.UseCors (_allowedOrigins);
+app.UseCors (_corsPolicy);
 
 app.MapControllers ();
 app.MapFallbackToFile ("index.html");
