@@ -1,10 +1,10 @@
-import { createApp, h, provide } from 'vue'
 import App from './App.vue'
 import router from './router'
 import { loadFonts } from './plugins/webfontloader'
-import { createVuetify } from 'vuetify';
-import { ApolloClient, InMemoryCache } from '@apollo/client/core'
 import { DefaultApolloClient } from '@vue/apollo-composable';
+import { createApp, provide, h } from 'vue';
+import { InMemoryCache, ApolloClient } from '@apollo/client/core';
+import { createVuetify } from 'vuetify';
 
 loadFonts()
 
