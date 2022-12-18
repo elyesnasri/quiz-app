@@ -12,7 +12,7 @@ const cache = new InMemoryCache()
 const apolloClient = new ApolloClient(
   {
     cache,
-    uri: '<https://localhost:7199/graphql>'
+    uri: 'https://localhost:7199/graphql'
   }
 )
 
@@ -26,6 +26,6 @@ const app = createApp({
 })
 
 app.use(router)
-  .use(vuetify)
+   .use(vuetify)
 
 app.mount('#app')
