@@ -4,7 +4,6 @@ import { loadFonts } from './plugins/webfontloader'
 import { DefaultApolloClient } from '@vue/apollo-composable';
 import { createApp, provide, h } from 'vue';
 import { InMemoryCache, ApolloClient } from '@apollo/client/core';
-import { createVuetify } from 'vuetify';
 
 loadFonts()
 
@@ -17,7 +16,6 @@ const apolloClient = new ApolloClient(
 )
 
 // https://www.apollographql.com/blog/frontend/getting-started-with-vue-apollo/
-const vuetify = createVuetify()
 const app = createApp({
   setup(){
     provide(DefaultApolloClient, apolloClient)
@@ -26,6 +24,5 @@ const app = createApp({
 })
 
 app.use(router)
-   .use(vuetify)
 
 app.mount('#app')
